@@ -1,20 +1,81 @@
-<<<<<<< HEAD
-# React + Vite
+# National Geographic Mobile Performance Optimization Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Digital Heroes Training Task B
 
-Currently, two official plugins are available:
+A performance analysis and optimization project focused on improving mobile website experience through evidence-based recommendations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project audits a real publicly accessible website, identifies mobile performance bottlenecks, prioritizes improvements based on impact and implementation cost, and demonstrates an optimized rebuild of a key section.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# nexora-crm
->>>>>>> b6a4db64d501da56825d3ca846712ffa6f8189d0
+# Audited Website
+
+**Website:** National Geographic
+
+**Audit Tool:** Google Lighthouse Mobile Audit
+
+---
+
+# Before Optimization Results
+
+| Metric | Result |
+|---|---:|
+| Performance Score | 26 |
+| First Contentful Paint | 4.8s |
+| Largest Contentful Paint | 19.4s |
+| Total Blocking Time | 4100ms |
+| Network Payload | 9MB |
+
+---
+
+# Problems Identified
+
+## JavaScript Performance
+
+- JavaScript execution time: 10.9s
+- Unused JavaScript savings: 1,496 KiB
+
+## Main Thread Blocking
+
+- Main thread work: 18.5s
+- 20 long tasks detected
+
+## Resource Size
+
+- Total network payload: 9,107 KiB
+
+## Image Optimization
+
+- Missing image dimensions
+- Inefficient resource delivery
+
+---
+
+# Optimization Implemented
+
+The demo rebuild includes:
+
+✅ WebP image delivery  
+✅ Lazy loading  
+✅ Explicit image dimensions  
+✅ Reduced page complexity  
+✅ Improved semantic HTML structure  
+
+---
+
+# After Optimization Results
+
+| Metric | Before | After |
+|---|---:|---:|
+| Performance Score | 26 | 55 |
+| LCP | 19.4s | 18.6s |
+| Total Blocking Time | 4100ms | 20ms |
+| Network Payload | 9MB | 3.3MB |
+
+---
+
+# Project Structure
