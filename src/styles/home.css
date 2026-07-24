@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+    --text:#0f172a;
+    --muted:#64748b;
+    --bg:#f8fafc;
+    --white:#ffffff;
+    --border:#e2e8f0;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+}
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    padding:90px 8%;
+    background:linear-gradient(180deg,#ffffff,#f8fbff);
+}
+
+.badge{
+    display:inline-block;
+    background:#dbeafe;
+    color:var(--primary);
+    padding:8px 16px;
+    border-radius:999px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    line-height:1.15;
+    color:var(--text);
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:var(--primary);
+}
+
+.hero p{
+    font-size:1.1rem;
+    color:var(--muted);
+    line-height:1.8;
+    max-width:550px;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.primary-btn{
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-2px);
+}
+
+.secondary-btn{
+    background:#fff;
+    color:var(--text);
+    border:1px solid var(--border);
+    padding:15px 30px;
+    border-radius:10px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+    box-shadow:var(--shadow);
+}
+
+.dashboard-card{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:var(--shadow);
+}
+
+.dashboard-card h3{
+    margin-bottom:20px;
+}
+
+.chart{
+    height:180px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#2563eb,#60a5fa);
+    margin-bottom:20px;
+}
+
+.mini-cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.mini-cards div{
+    background:#f1f5f9;
+    border-radius:12px;
+    padding:18px;
+}
+
+.features{
+    padding:90px 8%;
+    text-align:center;
+}
+
+.features h2{
+    font-size:2.4rem;
+    color:var(--text);
+    margin-bottom:15px;
+}
+
+.section-text{
+    color:var(--muted);
+    max-width:700px;
+    margin:0 auto 50px;
+    line-height:1.8;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.feature-card{
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+}
+
+.feature-card h3{
+    margin-bottom:15px;
+    color:var(--text);
+}
+
+.feature-card p{
+    color:var(--muted);
+    line-height:1.7;
+}
+
+.stats{
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.stat-card{
+    background:#fff;
+    border-radius:18px;
+    text-align:center;
+    padding:35px;
+    box-shadow:var(--shadow);
+}
+
+.stat-card h2{
+    color:var(--primary);
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.cta{
+    margin:90px 8%;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:#fff;
+    text-align:center;
+    border-radius:24px;
+    padding:70px 30px;
+}
+
+.cta h2{
+    font-size:2.4rem;
+    margin-bottom:20px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 35px;
+    line-height:1.8;
+}
+
+.cta .primary-btn{
+    background:#fff;
+    color:var(--primary);
+}
+
+.cta .primary-btn:hover{
+    background:#eff6ff;
+}
+
+@media(max-width:992px){
+
+.hero{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.hero p{
+    margin:auto auto 35px;
+}
+
+.feature-grid{
+    grid-template-columns:1fr;
+}
+
+.stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+.features,
+.hero,
+.cta{
+    padding-left:5%;
+    padding-right:5%;
+}
+
+}

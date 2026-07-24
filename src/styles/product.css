@@ -1,0 +1,21 @@
+.page{
+    padding:90px 8%;
+}
+
+.page-hero{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.page-hero h1{
+    font-size:3rem;
+    color:#0f172a;
+    margin-bottom:20px;
+}
+
+.page-hero p{
+    color:#64748b;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
